@@ -1,4 +1,5 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 //This is javascript code
 function attachEventListner(){
 let count = 0;
@@ -14,12 +15,12 @@ document.getElementById("clickMe").addEventListener("click" , function xyz() {
 
 //This is react code without writing JSX with createElement and createRoot , render
 
-const heading = React.createElement("h1",{id:"title1"} , "Namaste React from h1");
+const heading1 = React.createElement("h1", {id: "title"}, "Namaste React from h1");
 
 
-const heading2 = React.createElement("h2",{id:"title2"} , "Namaste React from h2");
+const heading2 = React.createElement("h2", {id: "sub_title"}, "Namaste React from h2");
 
-const container = React.createElement("div", {id:"container"}, [heading,heading2])
+const container = React.createElement("div", {id:"container"}, [heading1,heading2])
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

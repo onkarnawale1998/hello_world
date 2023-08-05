@@ -512,15 +512,15 @@ const RestaurantList = [
   }
 ]
 
-const RestaurantCard = (props) => {
+const RestaurantCard = ({restaurant}) => {
   return(
     <div className="card"> 
-      <img src= {"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ props.restaurant.info.cloudinaryImageId }  alt="Restaurant image"  />
-      <p>{props.restaurant.info.name}</p>
-      <h4>{props.restaurant.info.locality+ ", " +props.restaurant.info.areaName}</h4>
-      <h5>{props.restaurant.info.avgRating} Stars ({props.restaurant.info.totalRatingsString}ratings), {props.restaurant.info.costForTwo}</h5>
-      <h5>{props.restaurant.info.cuisines.join(",")}</h5>
-      <h5>{props.restaurant.info.sla.lastMileTravelString}s</h5>    
+      <img src= {"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ restaurant.info.cloudinaryImageId }  alt="Restaurant image"  />
+      <p>{restaurant.info.name}</p>
+      <h4>{restaurant.info.locality+ ", " +restaurant.info.areaName}</h4>
+      <h5>{restaurant.info.avgRating} Stars ({restaurant.info.totalRatingsString}ratings), {restaurant.info.costForTwo}</h5>
+      <h5>{restaurant.info.cuisines.join(",")}</h5>
+      <h5>{restaurant.info.sla.lastMileTravelString}s</h5>    
     </div>
   )
 }
